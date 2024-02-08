@@ -1,2 +1,0 @@
-This is a test file to check the persmissions on github.
-This is the second commit test. 
