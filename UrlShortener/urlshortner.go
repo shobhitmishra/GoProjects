@@ -116,6 +116,7 @@ func handleNewUrl(w http.ResponseWriter, r *http.Request) {
 // For a non-shortened but valid url, example curl is
 // http://localhost:8080/api/v1/url?url=https%3A%2F%2Fwww.wikipedia.org
 // If the requested url is neither a shortened url nor a valid url then we get an error and a bad request.
+// NOTE: http.Redirect redirects to a relative url unless the destination url has https:// as prefix.
 func redirectUrl(w http.ResponseWriter, r *http.Request) {
 	// read url from the query param
 	queryParams := r.URL.Query()
